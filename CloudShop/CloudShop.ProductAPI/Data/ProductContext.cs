@@ -1,6 +1,6 @@
-﻿using CloudShop.Client.Models;
+﻿using CloudShop.ProductAPI.Models;
 
-namespace CloudShop.Client.Data
+namespace CloudShop.ProductAPI.Data
 {
     public static class ProductContext
     {
