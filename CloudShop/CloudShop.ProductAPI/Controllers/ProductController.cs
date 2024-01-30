@@ -1,6 +1,7 @@
 ﻿using CloudShop.ProductAPI.Data;
 using CloudShop.ProductAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Driver;
 
 namespace CloudShop.ProductAPI.Controllers
 {
@@ -8,17 +9,19 @@ namespace CloudShop.ProductAPI.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
+        private readonly ProductContext _productContext;
         private readonly ILogger<ProductController> _logger;
 
-        public ProductController(ILogger<ProductController> logger)
+        public ProductController(ILogger<ProductController> logger, ProductContext productContext)
         {
-            _logger = logger;
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _productContext = productContext;
         }
 
         [HttpGet]
-        public IEnumerable<Product> Get()
-        { 
-            return ProductContext.Products;
+        public async Task<IEnumerable<Product>> Get()
+        {
+            return await _productContext.Products.Find(p => true).ToListAsync();
         }
 
     }
