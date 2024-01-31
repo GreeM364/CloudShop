@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  cloudshop.productapi:
+    image: ${DOCKER_REGISTRY-}cloudshopproductapi
+    build:
+      context: .
+      dockerfile: CloudShop.ProductAPI/Dockerfile
+
+  cloudshop.client:
+    image: ${DOCKER_REGISTRY-}cloudshopclient
+    build:
+      context: .
+      dockerfile: CloudShop.Client/Dockerfile
+
+  cloudshop.db:
+    image: mongo
+

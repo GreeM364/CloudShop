@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+  cloudshop.productapi:
+    container_name: cloudshopproductapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "DatabaseSettings:ConnectionString=mongodb://cloudshopdb:27017"
+    depends_on: 
+      - cloudshop.db
+    ports:
+      - "8000:80"
+
+  cloudshop.client:
+    container_name: cloudshopclient
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ProductAPIUrl=http://cloudshopproductapi"
+    depends_on: 
+      - cloudshop.db
+      - cloudshop.productapi
+    ports:
+      - "8001:80"
+
+  cloudshop.db:
+    container_name: cloudshopdb
+    restart: always
+    ports:
+      - "27018:27017"
+    volumes:
+      - ${WEBAPP_STORAGE_HOME}/site:/data/db
+

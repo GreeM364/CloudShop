@@ -6,7 +6,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddHttpClient("ProductAPI", product =>
 {
-    product.BaseAddress = new Uri("http://localhost:5000/"); 
+    product.BaseAddress = new Uri(builder.Configuration["ProductAPIUrl"]!);
 });
 
 

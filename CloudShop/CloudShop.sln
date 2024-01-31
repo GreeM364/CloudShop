@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34302.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudShop.Client", "CloudShop.Client\CloudShop.Client.csproj", "{BCD94F22-26BA-42E7-BD7C-664CE0E16387}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudShop.Client", "CloudShop.Client\CloudShop.Client.csproj", "{BCD94F22-26BA-42E7-BD7C-664CE0E16387}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudShop.ProductAPI", "CloudShop.ProductAPI\CloudShop.ProductAPI.csproj", "{0DC16132-A27C-4FA9-A34C-99B21E7A5F51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudShop.ProductAPI", "CloudShop.ProductAPI\CloudShop.ProductAPI.csproj", "{0DC16132-A27C-4FA9-A34C-99B21E7A5F51}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4A3B2257-D136-4B24-AD9F-8F14C3A1A348}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0DC16132-A27C-4FA9-A34C-99B21E7A5F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DC16132-A27C-4FA9-A34C-99B21E7A5F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DC16132-A27C-4FA9-A34C-99B21E7A5F51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A3B2257-D136-4B24-AD9F-8F14C3A1A348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A3B2257-D136-4B24-AD9F-8F14C3A1A348}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A3B2257-D136-4B24-AD9F-8F14C3A1A348}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A3B2257-D136-4B24-AD9F-8F14C3A1A348}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
