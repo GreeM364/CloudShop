@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudshopclient-deployment
+  labels:
+    app: cloudshopclient
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudshopclient
+  template:
+    metadata:
+      labels:
+        app: cloudshopclient
+    spec:
+      containers:
+        - name: cloudshopclient
+          image: greem364/cloudshopclient
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Development
+            - name: ProductAPIUrl
+              valueFrom:
+                configMapKeyRef:
+                  name: cloudshopproductapi-configmap
+                  key: cloudshopproductapi_url
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cloudshopclient-service
+spec:
+  type: NodePort
+  selector:
+    app: cloudshopclient
+  ports:
+    - protocol: TCP
+      port: 8001
+      targetPort: 80
+      nodePort: 30000
