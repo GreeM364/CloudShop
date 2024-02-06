@@ -8,8 +8,8 @@ trigger:
       - main
     paths:
       include:
-      - CloudShop/CloudShop.ProductAPI/*
-      - aks/cloudshopproductapi.yml
+      - CloudShop/CloudShop.Client/*
+      - aks/cloudshopclient.yml
       
 resources:
 - repo: self
@@ -18,9 +18,9 @@ variables:
 
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '73a09f18-b908-4b88-adb9-d6971558d9c8'
-  imageRepository: 'cloudshopproductapi'
+  imageRepository: 'cloudshopclient'
   containerRegistry: 'cloudshopacr.azurecr.io'
-  dockerfilePath: 'CloudShop/CloudShop.ProductAPI/Dockerfile'
+  dockerfilePath: 'CloudShop/CloudShop.Client/Dockerfile'
   tag: '$(Build.BuildId)'
   latestTag: 'latest'
   imagePullSecret: 'cloudshopacr1709ce3c-auth'
@@ -79,7 +79,7 @@ stages:
             inputs:
               action: deploy
               manifests: |
-                $(Pipeline.Workspace)/aks/cloudshopproductapi.yml
+                $(Pipeline.Workspace)/aks/cloudshopclient.yml
               imagePullSecrets: |
                 $(imagePullSecret)
               containers: |
