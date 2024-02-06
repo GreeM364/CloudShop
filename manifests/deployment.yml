@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: cloudshopproductapi 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudshopproductapi
+  template:
+    metadata:
+      labels:
+        app: cloudshopproductapi 
+    spec:
+      containers:
+        - name: cloudshopproductapi 
+          image: cloudshopacr.azurecr.io/cloudshopproductapi
+          ports:
+          - containerPort: 80
