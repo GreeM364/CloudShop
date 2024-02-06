@@ -27,12 +27,12 @@ spec:
               #     name: mongo-configmap
               #     key: connection_string
           resources:
-            limits:
-              memory: "512Mi"
-              cpu: "1"
             requests:
-              memory: "512Mi"
-              cpu: "0.2"
+              memory: "64Mi"
+              cpu: "0.1"
+            limits:
+              memory: "128Mi"
+              cpu: "0.3"
       imagePullSecrets: 
         - name: acr-secret
 ---
