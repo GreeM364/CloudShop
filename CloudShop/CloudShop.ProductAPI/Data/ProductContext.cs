@@ -33,7 +33,7 @@ namespace CloudShop.ProductAPI.Data
                     Name = "IPhone X",
                     Description =
                         "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
-                    ImageFile = "product-1.png",
+                    ImageFile = "https://cloudshop.blob.core.windows.net/product/IPhone-X.jpg?sv=2022-11-02&ss=b&srt=o&sp=r&se=2024-02-07T23:36:28Z&st=2024-02-07T15:36:28Z&spr=https&sig=G9jpkMoxtjEmh%2F41bO%2BCjDfFG%2BuVc4GYoUJ%2F4KQB0vw%3D",
                     Price = 950.00M,
                     Category = "Smart Phone"
                 },
@@ -42,7 +42,7 @@ namespace CloudShop.ProductAPI.Data
                     Name = "Samsung 10",
                     Description =
                         "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
-                    ImageFile = "product-2.png",
+                    ImageFile = "https://cloudshop.blob.core.windows.net/product/Samsung-10.jpg?sv=2022-11-02&ss=b&srt=o&sp=r&se=2024-02-07T23:36:28Z&st=2024-02-07T15:36:28Z&spr=https&sig=G9jpkMoxtjEmh%2F41bO%2BCjDfFG%2BuVc4GYoUJ%2F4KQB0vw%3D",
                     Price = 840.00M,
                     Category = "Smart Phone"
                 },
@@ -51,7 +51,7 @@ namespace CloudShop.ProductAPI.Data
                     Name = "Huawei Plus",
                     Description =
                         "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
-                    ImageFile = "product-3.png",
+                    ImageFile = "https://cloudshop.blob.core.windows.net/product/Huawei-Plus.jpg?sv=2022-11-02&ss=b&srt=o&sp=r&se=2024-02-07T23:36:28Z&st=2024-02-07T15:36:28Z&spr=https&sig=G9jpkMoxtjEmh%2F41bO%2BCjDfFG%2BuVc4GYoUJ%2F4KQB0vw%3D",
                     Price = 650.00M,
                     Category = "White Appliances"
                 },
@@ -60,7 +60,7 @@ namespace CloudShop.ProductAPI.Data
                     Name = "Xiaomi Mi 9",
                     Description =
                         "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
-                    ImageFile = "product-4.png",
+                    ImageFile = "https://cloudshop.blob.core.windows.net/product/Xiaomi-Mi-9.jpg?sv=2022-11-02&ss=b&srt=o&sp=r&se=2024-02-07T23:36:28Z&st=2024-02-07T15:36:28Z&spr=https&sig=G9jpkMoxtjEmh%2F41bO%2BCjDfFG%2BuVc4GYoUJ%2F4KQB0vw%3D",
                     Price = 470.00M,
                     Category = "White Appliances"
                 },
@@ -69,7 +69,7 @@ namespace CloudShop.ProductAPI.Data
                     Name = "HTC U11+ Plus",
                     Description =
                         "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
-                    ImageFile = "product-5.png",
+                    ImageFile = "https://cloudshop.blob.core.windows.net/product/HTC-U1-Plus.jpg?sv=2022-11-02&ss=b&srt=o&sp=r&se=2024-02-07T23:36:28Z&st=2024-02-07T15:36:28Z&spr=https&sig=G9jpkMoxtjEmh%2F41bO%2BCjDfFG%2BuVc4GYoUJ%2F4KQB0vw%3D",
                     Price = 380.00M,
                     Category = "Smart Phone"
                 },
@@ -78,7 +78,7 @@ namespace CloudShop.ProductAPI.Data
                     Name = "LG G7 ThinQ New8",
                     Description =
                         "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
-                    ImageFile = "product-6.png",
+                    ImageFile = "https://cloudshop.blob.core.windows.net/product/LG-G7-ThinQ-New8.jpg?sv=2022-11-02&ss=b&srt=o&sp=r&se=2024-02-07T23:36:28Z&st=2024-02-07T15:36:28Z&spr=https&sig=G9jpkMoxtjEmh%2F41bO%2BCjDfFG%2BuVc4GYoUJ%2F4KQB0vw%3D",
                     Price = 240.00M,
                     Category = "Home Kitchen"
                 }
